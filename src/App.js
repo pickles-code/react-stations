@@ -30,10 +30,10 @@ export const App = () => {
 
   return (
     <div>
-      <header>
-        <h1>React-Stations</h1>
+      <header className="header">
+        <h1 className="title">React-Stations</h1>
       </header>
-      <p>description</p>
+      <p className="text">description</p>
       <img src={dogUrl} alt="" />
       <button onClick={handleClick}>change</button>
     </div>
