@@ -10,7 +10,11 @@ import './App.css'
 export const App = () => {
   return (
     <div>
-      <h2>Hello, world!</h2>
+      <header>
+        <h1>React-Stations</h1>
+      </header>
+      <p>description</p>
+      <img src="https://images.dog.ceo/breeds/terrier-fox/n02095314_1582.jpg" alt="" />
     </div>
   )
 }
