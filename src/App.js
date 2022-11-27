@@ -15,14 +15,14 @@ import { useState } from 'react';
 
 export const App = () => {
 
-  const [dogUrl, setDogUrl] = useState([])
+  const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/terrier-fox/n02095314_1582.jpg')
 
   const handleClick = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
       .then(res => res.json())
       .then(
         (result) => {
-          setDogUrl(result);
+          setDogUrl(result.message);
           console.log(result);
         }
       )
@@ -34,7 +34,7 @@ export const App = () => {
         <h1>React-Stations</h1>
       </header>
       <p>description</p>
-      <img src={dogUrl.message} alt="" />
+      <img src={dogUrl} alt="" />
       <button onClick={handleClick}>change</button>
     </div>
   )
